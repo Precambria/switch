@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <link rel="stylesheet" href="precambria-switch.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="precambria-switch.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    
+    
+    $(document).ready(
+        /*
+            options:
+            [:on]           Text for "on" state (shown within control) - very finite space for this (YES, ON, YAY, etc...)       
+            [:off]          Text for "off" state ("") - (NO, OFF, NAY, etc...)         
+            [:labelRight]   Add a lebel to the right of the control
+            [:labelLeft]    Add a label to the left of the control   
+            [:labelMargin]  Define a horizontal margin for the left and right labels
+            [:defaultState] Define the initial state of the control (defaults to off)
+        */
+        
+        // example usage
+         function()
+         {
+             // respond to change event (as if this were a check box)
+             $('#one').on('change',function(){console.log('changed',$(this).data('checked'))})
+             // left and right labels as well as "on"/"off" state text and an "on" default state
+             $('#one').precambriaSwitch({on:'YES',off:'NO',defaultState:'on',labelLeft:'Hello World',labelRight:'Oh Hey'});
+             // left and right labels with predefined margins
+             $('#two').precambriaSwitch({labelLeft:'Goodbye World',labelMargin:40,labelRight:'Bye!'});
+             //just a label on the left with a 10px margin
+             $('#three').precambriaSwitch({labelLeft:"I mean it... I'm Leaving",labelMargin:10});
+             //just a label on the right with a 10px margin
+             $('#four').precambriaSwitch({labelRight:"I mean it... I'm Leaving",labelMargin:10});
+         }
+
+    );
+    </script>
+</head>
+
+<body>
+    <div id="one"></div>
+    <p>
+    <div id="two"></div>
+    </p>
+    <div id="three"></div>
+    <p>
+    <div id="four"></div>
+    </p>
+</body>
+</html>
