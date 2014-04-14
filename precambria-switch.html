@@ -26,7 +26,7 @@
          function()
          {
              // respond to change event (as if this were a check box)
-             $('#one').on('change',function(){console.log('changed',$(this).data('checked'))})
+             $('#one').on('change',function(){alert('checked? '+$(this).data('checked'))})
              // left and right labels as well as "on"/"off" state text and an "on" default state
              $('#one').precambriaSwitch({on:'YES',off:'NO',defaultState:'on',labelLeft:'Hello World',labelRight:'Oh Hey'});
              // left and right labels with predefined margins

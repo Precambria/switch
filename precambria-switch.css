@@ -1,9 +1,9 @@
-.precambria-switch *{
+.pre-switch *{
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
-.precambria-switch.container{
+.pre-switch.container{
     position:relative;
     font-size:16px;
     width:55px;
@@ -16,17 +16,17 @@
     box-shadow:inset 0 1px 1px 1px rgba(0,0,0,.5);
     background-color:#fff;
 }
-.afterLabel{
+.pre-afterLabel{
     position:absolute;
     line-height: 25px;
     color:#000;
 }
-.beforeLabel{
+.pre-beforeLabel{
     position:absolute;
     line-height: 25px;
     color:#000;
 }
-.precambria-switch.handle{
+.pre-switch.handle{
     position:absolute;
     width:25px;
     height:25px;
@@ -42,24 +42,24 @@
     background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
     background-image: linear-gradient(to bottom, white 40%, #cccccc);
 }
-.precambria-switch.center{
+.pre-switch.center{
     width:21px;
     height:21px;
     margin:2px;
     -webkit-border-radius:42px;
     border-radius:42px;
 }
-.precambria-switch.on {
+.pre-switch.on {
     -webkit-transform:translateX(30px);
     -o-transform:translateX(30px);
     transform:translateX(30px);
 }
-.precambria-switch.off {
+.pre-switch.off {
     -webkit-transform:translateX(0px);
     -o-transform:translateX(0px);
     transform:translateX(0px);
 }
-.label{
+.pre-label{
     position:absolute;
     width:55px;
     height:25px;
@@ -68,11 +68,11 @@
     -webkit-border-radius:25px;
     border-radius:25px;
 }
-.label.onlabel{
+.pre-label.onlabel{
     background-color:rgba(0,200,0,.5);
     text-align:left;
 }
-.label.offlabel{
+.pre-label.offlabel{
     background-color:rgba(0,0,0,.2);
     text-align:right;
 }

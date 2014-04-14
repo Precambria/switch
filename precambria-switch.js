@@ -13,8 +13,8 @@
         var h               = $('<div>');
         var m               = $('<div>');
         var jqself          = this;
-        var onTitle         = $('<span class="label onlabel">'+on+'</span>');
-        var offTitle        = $('<span class="label offlabel">'+off+'</span>');
+        var onTitle         = $('<span class="pre-label onlabel">'+on+'</span>');
+        var offTitle        = $('<span class="pre-label offlabel">'+off+'</span>');
         var ison            = (currentState === 'on')       ? true          : false;
         var touchmove       = ('ontouchmove' in window)     ? 'touchmove'   : 'mousemove';
         var touchstart      = ('ontouchstart' in window)    ? 'touchstart'  : 'mousedown';
@@ -25,10 +25,10 @@
             offTitle.hide();
         if(ison)onTitle.show();else offTitle.show();
         
-		   h.addClass('precambria-switch handle '+currentState);
-           m.addClass('precambria-switch center');
+		   h.addClass('pre-switch handle '+currentState);
+           m.addClass('pre-switch center');
            h.html(m);
-		this.addClass('precambria-switch container');
+		this.addClass('pre-switch container');
         this.html(onTitle)
         this.append(offTitle);
         this.append(h);
@@ -40,7 +40,7 @@
                 ctx.font    = '16px sans-serif';//this.css('font-size');    
                 console.log(ctx.font);
             var width       = ctx.measureText(beforeLabel).width+labelMargin;
-            var elem        = $('<div>'+beforeLabel+'</div>').addClass('beforeLabel');
+            var elem        = $('<div>'+beforeLabel+'</div>').addClass('pre-beforeLabel');
                 elem.css('left',(width*-1));
                 
             this.css('margin-left',width);
@@ -53,7 +53,7 @@
                 ctx.font    = '16px sans-serif';//this.css('font-family');      
                 console.log(ctx.font);    
             var width       = ctx.measureText(afterLabel).width+labelMargin;
-            var elem        = $('<div>'+afterLabel+'</div>').addClass('afterLabel');
+            var elem        = $('<div>'+afterLabel+'</div>').addClass('pre-afterLabel');
                 elem.css('right',(width*-1));
 
             this.css('margin-right',width);
